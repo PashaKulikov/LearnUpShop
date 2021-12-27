@@ -11,8 +11,9 @@ public class Main {
         st.storage.put(2, two);
         st.storage.put(3, three);
 
-        System.out.println(st.storage.get(2));
         System.out.println(st.countLeftovers(st.storage));
+        st.countByVendorCod(0);
+        st.countByVendorCod(1);
 
 
 

@@ -1,6 +1,6 @@
 public class Product implements Comparable<Product> {
     private String name;
-    private  int vendorCode;
+    private  int amount;
 
     @Override
     public int compareTo(Product o) {
@@ -12,13 +12,13 @@ public class Product implements Comparable<Product> {
     public String toString() {
         return "Product{" +
                 "name='" + name + '\'' +
-                ", vendorCode=" + vendorCode +
+                ", amount=" + amount +
                 '}';
     }
 
     public Product(String name, int vendorCode) {
         this.name = name;
-        this.vendorCode = vendorCode;
+        this.amount = vendorCode;
     }
 
     public String getName() {
@@ -30,10 +30,10 @@ public class Product implements Comparable<Product> {
     }
 
     public int getVendorCode() {
-        return vendorCode;
+        return amount;
     }
 
     public void setVendorCode(int vendorCode) {
-        this.vendorCode = vendorCode;
+        this.amount = vendorCode;
     }
 }
