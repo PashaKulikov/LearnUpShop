@@ -6,21 +6,21 @@ public class StorageOfGoods {
    /*
    метод считает и сортирует остатки
     */
-    public ArrayList<Product> countLeftovers(Map<Integer, Product> storage) {
-        ArrayList<Product> productArrayList = new ArrayList<>();
+    public TreeSet<Product> countLeftovers(Map<Integer, Product> storage) {
+        TreeSet<Product> productTreeSet = new TreeSet<>();
         for (Map.Entry<Integer, Product> entry : storage.entrySet()) {
-            productArrayList.add(entry.getValue());
+            productTreeSet.add(entry.getValue());
         }
-        Collections.sort(productArrayList);
-        return productArrayList;
+
+        return productTreeSet;
     }
 
          /*
        метод определяет товар по артиклу
         */
-    public void countByVendorCod(int vendorCod ){
+    public Product countByVendorCod(int vendorCod ){
        // System.out.println(storage.get(vendorCod));
         final Product valueOrDefault = storage.computeIfAbsent(vendorCod, key -> null);
-        System.out.println(valueOrDefault);
+        return valueOrDefault;
     }
 }
