@@ -1,11 +1,15 @@
 import java.util.*;
 
 public class StorageOfGoods {
-    Map<Integer, Product> storage = new HashMap<>();
+    private Map<Integer, Product> storage = new HashMap<>();
 
-   /*
-   метод считает и сортирует остатки
-    */
+    public Map<Integer, Product> getStorage() {
+        return storage;
+    }
+
+    /*
+       метод считает и сортирует остатки
+        */
     public TreeSet<Product> countLeftovers(Map<Integer, Product> storage) {
         TreeSet<Product> productTreeSet = new TreeSet<>();
         for (Map.Entry<Integer, Product> entry : storage.entrySet()) {

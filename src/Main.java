@@ -7,11 +7,11 @@ public class Main {
         StorageOfGoods st = new StorageOfGoods();
 
 
-        st.storage.put(1, one);
-        st.storage.put(2, two);
-        st.storage.put(3, three);
+        st.getStorage().put(1, one);
+        st.getStorage().put(2, two);
+        st.getStorage().put(3, three);
 
-        System.out.println(st.countLeftovers(st.storage));
+        System.out.println(st.countLeftovers(st.getStorage()));
         System.out.println(st.countByVendorCod(2));
         System.out.println(st.countByVendorCod(1));
 
